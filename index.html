@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="./resource/css/reset.css" />
+    <link rel="stylesheet" href="./resource/fonts/nanumBarunGothic.css" />
+    <link rel="stylesheet" href="./resource/css/process.css" />
+    <title>오이사공</title>
+</head>
+<body>
+    <!--state-item .active 붙이시면 파랑색 .complete 붙이시면 검정으로 표시 됩니다-->
+    <div class="wrapper">
+        <header class="site-header">
+            <div class="logo-box"> <img src="./resource/images/logo.svg" alt="스마트한 인사관리 오이사공"></div>
+            <h1 class="title-box">급여계산 프로세스</h1>
+        </header>
+       <div class="content-box">
+           <div class="process-box">
+               <div class="process-list">
+                   <div class="process-item">
+                       <button class="arrow-button"><img src="./resource/images/icon-link.svg"></button>
+                       <h2 class="title">급여일자</h2>
+                       <h2 class="info-box">급여일자를 생성해야 간편계산을 할 수 있습니다.</h2>
+                       <div class="input-box">
+                           <div class="input-item">
+                               <button class="prev-button">이전</button>
+                               <input type="text" value="2024-12">
+                               <button class="next-button">다음</button>
+                           </div>
+                           <div class="input-item">
+                               <select>
+                                   <option>2024-12-25 급여</option>
+                                   <option>2024-12-26 급여</option>
+                                   <option>2024-12-27 급여</option>
+                               </select>
+                           </div>
+                       </div>
+
+                   </div>
+                   <div class="process-item transparent">
+                       <button class="arrow-button"><img src="./resource/images/icon-link.svg"></button>
+                       <h2 class="title">예외처리</h2>
+                   </div>
+                   <div class="process-group">
+                       <div class="process-item">
+                           <button class="arrow-button"><img src="./resource/images/icon-link.svg"></button>
+                           <h2 class="title">대상자</h2>
+
+                           <div class="state-item active">생성</div>
+                           <div class="result">[결과]</div>
+                       </div>
+                       <div class="process-item">
+                           <button class="arrow-button"><img src="./resource/images/icon-link.svg"></button>
+                           <h2 class="title">RPA</h2>
+                           <div class="state-item">처리</div>
+                           <div class="result">[결과]</div>
+                       </div>
+                       <div class="process-item">
+                           <button class="arrow-button"><img src="./resource/images/icon-link.svg"></button>
+                           <h2 class="title">급여예산</h2>
+                           <div class="state-item">계산</div>
+                           <div class="result">2024-12-01 5명</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="state-box">
+                   <!--
+                   <div class="text-box">
+                       <h3>급여명세서 조회가능</h3>
+                       <span class="state-item active">마감</span>
+                   </div>
+                   -->
+
+                   <!--
+                   <div class="text-box">
+                       <h3>마감실행시 급여명세서 조회 가능합니다.</h3>
+                       <span class="state-item active">마감실행</span>
+                   </div>
+                   -->
+
+                   <div class="text-box">
+                       <h3>급여명세서 조회를 할 수 있습니다.</h3>
+                       <span class="state-item complete">마감완료</span>
+                   </div>
+
+               </div>
+           </div>
+       </div>
+        <footer class="site-footer">
+            <p>간편계산은 특이사항이 없을 경우 이용해주시기 바라며, 간편계산 결과는 해당메뉴에서 확인하여 주시고, 상세한 급여작업은 각각 메뉴에서 해주십시오.</p>
+        </footer>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "utf-8";
+html{height: 100%;font-size: 0.520833333333333vw;}
+body{height: 100%;}
+.wrapper{height: 100%;}
+
+:root{
+    --site-header-height: 12rem;
+    --site-footer-height: 12rem;
+    --input-height: 4rem;
+}
+.state-item{font-family: NanumBarunGothic,sans-serif;font-size:2.4rem;font-weight:700;color:#ffffff;padding:1.4rem 2.3rem;background-color: #DFE4F0;border-radius: 10rem;display: inline-block;margin-top: 2rem;}
+.state-item.active{background-color: #5E9BFB;}
+.state-item.complete{background-color: #333333;}
+
+.site-header{display: flex;width: 100%;height: var(--site-header-height);background-color: #5E9BFB;color:#ffffff;justify-content: center;align-items: center;position: relative;padding:0 40px;}
+.site-header .title-box{font-family: NanumBarunGothic,sans-serif;font-weight: 700;font-size:4rem;}
+.site-header .logo-box{position: absolute;left: 40px;top:50%;transform: translateY(-50%);}
+.site-header .logo-box > img{width: 12.2rem;display: block;}
+
+.content-box{height: calc(100% - (var(--site-header-height) + var(--site-footer-height)));background-color: #EDF0F9;padding:0 11.4rem;display: flex;align-items: center;justify-content: center;}
+.content-box .process-box{margin-top: 2rem;;}
+.content-box .process-box .input-box{display: flex;flex-direction: column;row-gap: 1rem;align-items: center;}
+.content-box .process-box .input-item{display: flex;align-items: center;column-gap: 0.3rem;}
+.content-box .process-box .input-item .prev-button{font-size: 0;text-indent: -99999px;background-image: url("../images/icon-input-arrow.svg");background-position:center;background-size: 1.3rem 0.9rem;background-repeat: no-repeat;width: 2.3rem;height: 2.3rem;transform: rotate(90deg);}
+.content-box .process-box .input-item .next-button{font-size: 0;text-indent: -99999px;background-image: url("../images/icon-input-arrow.svg");background-position:center;background-size: 1.3rem 0.9rem;background-repeat: no-repeat;width: 2.3rem;height: 2.3rem;transform: rotate(-90deg);}
+.content-box .process-box .input-item input:is([type='text'],[type='date'],[type='password'],[type='datetime-local']){border:1px solid #DDE4F3;height: var(--input-height);border-radius: 1rem;font-size: 1.8rem;font-weight: 400;width: 10.2rem;padding:0 1.4rem;color:#333333;}
+.content-box .process-box .input-item select{width: 20rem;border:1px solid #DDE4F3;height: var(--input-height);border-radius: 1rem;font-size: 1.8rem;font-weight: 400;padding:0 2rem;color:#333333;  -moz-appearance: none;-webkit-appearance: none;appearance: none;background-image: url("../images/icon-input-arrow.svg");background-size: 1.3rem .9rem;background-repeat: no-repeat;background-position: 95% center;}
+.content-box .process-box .info-box{font-family: NanumBarunGothic,sans-serif;font-size:1.8rem;color:#999999; width: 80%; /* margin-bottom: 4rem;padding-left: 14.3rem; */}
+.content-box .process-box .process-list{display: flex;width: 100%;column-gap: 4rem;align-items: center}
+.content-box .process-box .process-item{width:28.5rem;height: 32rem;background-color: #FFFFFF;border-radius: 3rem;box-shadow: 0.5rem 0.8rem 2rem 0  rgba(0,0,0,0.07);position: relative;text-align: center;display: flex;flex-direction: column;row-gap: 3rem;align-items: center;justify-content: flex-start;padding-top: 7rem;    z-index: 1;}
+.content-box .process-box .process-item.transparent{border:0.1rem solid #D4D9E7;background-color:#EDF0F9; }
+.content-box .process-box .process-item.transparent::before{content:'';display: block;background-image: url("../images/dat-line-arrow.svg");background-repeat:no-repeat;background-size:cover;width: 40.1rem;height: 20.6rem;position: absolute;left: -4rem;top: -2.7rem;}
+.content-box .process-box .process-item .arrow-button{position: absolute;top:2rem;right: 2rem;}
+.content-box .process-box .process-item .arrow-button > img{width: 4.2rem;height: 4.2rem;}
+.content-box .process-box .process-item .title {font-family: NanumBarunGothic,sans-serif;font-size: 3rem;color:#333333;font-weight: 700;text-align: center;}
+.content-box .process-box .process-item .state {font-family: NanumBarunGothic,sans-serif;font-size:2.4rem;font-weight:700;color:#ffffff;padding:1.4rem 2.3rem;background-color: #5E9BFB;border-radius: 10rem;display: inline-block;}
+.content-box .process-box .process-item .result {font-family: NanumBarunGothic,sans-serif;font-size:2.4rem;font-weight:400;color: #999999;}
+.content-box .process-box .process-group{padding:4rem;column-gap: 5rem;border-radius: 3rem;background-color: #DFE4F0;display: flex;position: relative;}
+.content-box .process-box .process-group::after{content:'간편계산';font-size: 2rem;font-weight: 400;color:#666666;position: absolute;bottom:-1rem;left: 50%;transform: translate(-50%,100%);}
+.content-box .process-box .process-group .process-item:nth-of-type(n + 2)::before{content:'';display: block;background-image: url("../images/icon-dat-arrw.svg");background-repeat:no-repeat;background-size:cover;width: 3.7rem;height: 4rem;position: absolute;left: 0;top:50%;transform: translate(-100%,-50%);left: -0.5rem;}
+.content-box .process-box .state-box{border:0.5rem dashed #C7CEE0; border-top:0;border-radius: 0 0 2rem 2rem;height: 14rem;width: calc(100% - 32.5rem);margin-left: 14.3rem;position: relative;display: flex;justify-content: center;align-items: flex-end;transform: translateY(-4rem)}
+.content-box .process-box .state-box::before{content:'';background-image: url("../images/icon-line-arrow.svg");background-repeat:no-repeat;background-size:cover;width: 1.9rem;height: 1.2rem;display: block;position: absolute;left: -0.2rem;top:0;transform: translate(-50%,-50%)}
+.content-box .process-box .state-box .text-box{text-align: center;transform: translateY(3.1rem)}
+.content-box .process-box .state-box .text-box h3{font-family: NanumBarunGothic,sans-serif;font-size: 2rem;color:#666666;}
+.content-box .process-box .state-box .text-box .state-item{font-family: NanumBarunGothic,sans-serif;font-size:2.4rem;font-weight:700;color:#ffffff;padding:1.4rem 2.3rem;border-radius: 10rem;display: inline-block;margin-top: 2rem;}
+
+.site-footer{display: flex;width: 100%;height: var(--site-footer-height);background-color: #3A4248;color:#ffffff;justify-content: center;align-items: center;position: relative;padding:0 4rem;}
+.site-footer p{font-family: NanumBarunGothic,sans-serif;font-weight: 400;font-size:2.4rem;}
